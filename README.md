@@ -21,22 +21,14 @@ Environment: Docker (optional for reproducibility)
 
 # Setup Instructions
 1. Clone this repo:
-bash
-Copy code
-git clone https://github.com/yourusername/repo-name.git
+git clone https://github.com/Vikrant Tyagi/repo-name.git
 cd repo-name
-2. Create environment (optional)
-bash
-Copy code
+2. Create environment
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 3. Install dependencies
-bash
-Copy code
 pip install -r requirements.txt
 4. Run the code
-bash
-Copy code
 python main.py
 To stop the video, press q in the video window.
 
@@ -52,16 +44,15 @@ Example Labels:
 
 "Missing: Bottle"
 
-(Screenshots and output_video.mp4 can be found in the repo.)
 
-⚙# Optimizations
+# Optimizations
 Lightweight model (yolov5s) for speed
 
 Manual FPS calculation using time
 
 Skipped video writing to avoid FPS drop during testing
 
-📈 Possible Improvements
+# Possible Improvements
 Add object tracking (e.g., DeepSORT)
 
 Use GPU if available
