@@ -1,0 +1,30 @@
+# Use an official CUDA image with Python and PyTorch pre-installed
+FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+
+# Set the working directory
+WORKDIR /app
+
+# Install basic dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    git \
+    curl \
+    unzip \
+    && apt-get clean
+
+# Install Python dependencies
+requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Copy your project files
+COPY . .
+
+# Set environment variables to prevent Python from writing pyc files and buffering stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Default command
+CMD ["python", "main.py"]
