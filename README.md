@@ -21,7 +21,7 @@ Environment: Docker (optional for reproducibility)
 
 # Setup Instructions
 1. Clone this repo:
-git clone https://github.com/Vikrant Tyagi/repo-name.git
+git clone https://github.com/Vikrant_Tyagi/repo-name.git
 cd repo-name
 2. Create environment
 python -m venv venv
