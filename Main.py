@@ -24,7 +24,8 @@ model.conf = 0.4  # Confidence threshold
 tracker = DeepSort(max_age=30)
 
 # Setup video
-cap = cv2.VideoCapture('input.mp4')
+video_path = 'input/input_video.mp4'
+cap = cv2.VideoCapture(video_path)
 prev_ids = set()
 
 while cap.isOpened():
